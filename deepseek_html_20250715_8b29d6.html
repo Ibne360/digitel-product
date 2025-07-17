@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultimate Digital Bundle - Everything You Need in One Package</title>
+    <title>Ultimate Digital Bundle - Everything You Need</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #6a11cb;
             --secondary: #2575fc;
             --accent: #00d2ff;
-            --dark: #121212;
-            --darker: #0a0a0a;
+            --dark: #0f0c29;
+            --darker: #090618;
             --light: #f8f9fa;
             --gray: #2d2d3a;
             --success: #00c9a7;
             --warning: #ffd166;
+            --card-bg: rgba(30, 30, 46, 0.7);
         }
         
         * {
@@ -31,6 +32,7 @@
             color: var(--light);
             line-height: 1.6;
             overflow-x: hidden;
+            background-attachment: fixed;
         }
         
         .container {
@@ -42,7 +44,7 @@
         
         /* Header Styles */
         header {
-            background: rgba(10, 10, 10, 0.9);
+            background: rgba(15, 12, 41, 0.95);
             backdrop-filter: blur(10px);
             padding: 20px 0;
             position: fixed;
@@ -50,6 +52,7 @@
             top: 0;
             z-index: 1000;
             border-bottom: 1px solid rgba(106, 17, 203, 0.3);
+            transition: all 0.4s ease;
         }
         
         .header-container {
@@ -124,6 +127,7 @@
         .cta-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 7px 20px rgba(106, 17, 203, 0.6);
+            background: linear-gradient(45deg, var(--secondary), var(--accent));
         }
         
         /* Hero Section */
@@ -141,7 +145,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(106, 17, 203, 0.1) 0%, rgba(37, 117, 252, 0.05) 70%, transparent 100%);
+            background: radial-gradient(circle, rgba(106, 17, 203, 0.15) 0%, rgba(37, 117, 252, 0.1) 70%, transparent 100%);
             z-index: -1;
         }
         
@@ -155,6 +159,7 @@
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
         
         .hero p {
@@ -213,6 +218,7 @@
             background-clip: text;
             color: transparent;
             position: relative;
+            padding: 0 20px;
         }
         
         .section-title h2::after {
@@ -235,13 +241,14 @@
         }
         
         .bundle-card {
-            background: rgba(30, 30, 46, 0.6);
+            background: var(--card-bg);
             border-radius: 15px;
             overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.4s ease;
             border: 1px solid rgba(106, 17, 203, 0.3);
             position: relative;
             z-index: 1;
+            backdrop-filter: blur(10px);
         }
         
         .bundle-card:hover {
@@ -257,10 +264,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(106, 17, 203, 0.1), rgba(37, 117, 252, 0.05));
+            background: linear-gradient(135deg, rgba(106, 17, 203, 0.2), rgba(37, 117, 252, 0.1));
             z-index: -1;
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.4s ease;
         }
         
         .bundle-card:hover::before {
@@ -284,6 +291,7 @@
             align-items: center;
             justify-content: center;
             font-size: 24px;
+            flex-shrink: 0;
         }
         
         .bundle-title {
@@ -315,11 +323,12 @@
             color: var(--accent);
             font-size: 14px;
             margin-top: 5px;
+            flex-shrink: 0;
         }
         
         /* Features Section */
         .features {
-            background: linear-gradient(135deg, rgba(10, 10, 26, 0.8), rgba(20, 20, 40, 0.9));
+            background: linear-gradient(135deg, rgba(15, 12, 41, 0.8), rgba(20, 15, 51, 0.9));
             border-radius: 20px;
             padding: 50px;
             margin: 80px 0;
@@ -335,7 +344,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(0, 210, 255, 0.05) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(0, 210, 255, 0.1) 0%, transparent 70%);
             z-index: -1;
             animation: rotate 20s linear infinite;
         }
@@ -353,12 +362,13 @@
         }
         
         .feature-card {
-            background: rgba(30, 30, 46, 0.6);
+            background: var(--card-bg);
             border-radius: 15px;
             padding: 30px;
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: all 0.4s ease;
             border: 1px solid rgba(106, 17, 203, 0.2);
+            backdrop-filter: blur(5px);
         }
         
         .feature-card:hover {
@@ -381,7 +391,7 @@
         .cta-section {
             text-align: center;
             padding: 100px 0;
-            background: linear-gradient(135deg, rgba(10, 10, 26, 0.9), rgba(20, 20, 40, 0.95));
+            background: linear-gradient(135deg, rgba(15, 12, 41, 0.9), rgba(20, 15, 51, 0.95));
             border-radius: 20px;
             margin: 80px 0;
             position: relative;
@@ -405,6 +415,10 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 3rem;
             margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--accent), var(--light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
         
         .cta-section p {
@@ -440,7 +454,7 @@
         
         /* Footer */
         footer {
-            background: rgba(10, 10, 10, 0.95);
+            background: rgba(15, 12, 41, 0.95);
             padding: 50px 0 20px;
             border-top: 1px solid rgba(106, 17, 203, 0.3);
         }
@@ -564,6 +578,38 @@
             .cta-section {
                 padding: 60px 20px;
             }
+            
+            .footer-content {
+                gap: 20px;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        .delay-1 {
+            animation-delay: 0.1s;
+        }
+        
+        .delay-2 {
+            animation-delay: 0.2s;
+        }
+        
+        .delay-3 {
+            animation-delay: 0.3s;
         }
     </style>
 </head>
@@ -588,9 +634,9 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>The Ultimate Digital Product Bundle</h1>
-            <p>Everything you need for AI, design, development, and content creation in one massive <span class="highlight">4TB+ collection</span> at an unbeatable price.</p>
-            <div class="hero-buttons">
+            <h1 class="animate">The Ultimate Digital Product Bundle</h1>
+            <p class="animate delay-1">Everything you need for AI, design, development, and content creation in one massive <span class="highlight">4TB+ collection</span> at an unbeatable price.</p>
+            <div class="hero-buttons animate delay-2">
                 <button class="cta-button">Download Now <i class="fas fa-arrow-down"></i></button>
                 <button class="secondary-button"><i class="fas fa-play-circle"></i> Watch Demo</button>
             </div>
@@ -604,7 +650,7 @@
                 <h2><i class="fas fa-robot"></i> AI & Automation Bundle</h2>
             </div>
             <div class="bundles-container">
-                <div class="bundle-card">
+                <div class="bundle-card animate delay-1">
                     <div class="bundle-header">
                         <div class="bundle-icon">
                             <i class="fas fa-brain"></i>
@@ -622,7 +668,7 @@
                     </div>
                 </div>
                 
-                <div class="bundle-card">
+                <div class="bundle-card animate delay-2">
                     <div class="bundle-header">
                         <div class="bundle-icon">
                             <i class="fas fa-video"></i>
@@ -648,7 +694,7 @@
                 <h2><i class="fas fa-laptop-code"></i> Premium Software Collection</h2>
             </div>
             <div class="bundles-container">
-                <div class="bundle-card">
+                <div class="bundle-card animate delay-1">
                     <div class="bundle-header">
                         <div class="bundle-icon">
                             <i class="fab fa-windows"></i>
@@ -671,7 +717,7 @@
                     </div>
                 </div>
                 
-                <div class="bundle-card">
+                <div class="bundle-card animate delay-2">
                     <div class="bundle-header">
                         <div class="bundle-icon">
                             <i class="fas fa-mobile-alt"></i>
@@ -702,7 +748,7 @@
                 <h2><i class="fas fa-palette"></i> Graphics & Design Mega Bundle</h2>
             </div>
             <div class="bundles-container">
-                <div class="bundle-card">
+                <div class="bundle-card animate delay-1">
                     <div class="bundle-header">
                         <div class="bundle-icon">
                             <i class="fas fa-images"></i>
@@ -725,7 +771,7 @@
                     </div>
                 </div>
                 
-                <div class="bundle-card">
+                <div class="bundle-card animate delay-2">
                     <div class="bundle-header">
                         <div class="bundle-icon">
                             <i class="fas fa-tools"></i>
@@ -759,7 +805,7 @@
                 <h2><i class="fas fa-code"></i> Website & Development</h2>
             </div>
             <div class="bundles-container">
-                <div class="bundle-card">
+                <div class="bundle-card animate delay-1">
                     <div class="bundle-header">
                         <div class="bundle-icon">
                             <i class="fas fa-globe"></i>
@@ -787,7 +833,7 @@
                 <h2><i class="fas fa-graduation-cap"></i> Learning & Paid Courses</h2>
             </div>
             <div class="bundles-container">
-                <div class="bundle-card">
+                <div class="bundle-card animate delay-1">
                     <div class="bundle-header">
                         <div class="bundle-icon">
                             <i class="fas fa-book-open"></i>
@@ -826,7 +872,7 @@
                 <h2><i class="fas fa-book"></i> Ebooks & Templates</h2>
             </div>
             <div class="bundles-container">
-                <div class="bundle-card">
+                <div class="bundle-card animate delay-1">
                     <div class="bundle-header">
                         <div class="bundle-icon">
                             <i class="fas fa-file-alt"></i>
@@ -857,7 +903,7 @@
                 <h2><i class="fas fa-tools"></i> Other Premium Tools</h2>
             </div>
             <div class="bundles-container">
-                <div class="bundle-card">
+                <div class="bundle-card animate delay-1">
                     <div class="bundle-header">
                         <div class="bundle-icon">
                             <i class="fas fa-key"></i>
@@ -888,7 +934,7 @@
                 <h2>Why Choose Our Bundle?</h2>
             </div>
             <div class="features-grid">
-                <div class="feature-card">
+                <div class="feature-card animate delay-1">
                     <div class="feature-icon">
                         <i class="fas fa-save"></i>
                     </div>
@@ -896,7 +942,7 @@
                     <p>All digital resources in one place - no need to purchase separately</p>
                 </div>
                 
-                <div class="feature-card">
+                <div class="feature-card animate delay-2">
                     <div class="feature-icon">
                         <i class="fas fa-wallet"></i>
                     </div>
@@ -904,7 +950,7 @@
                     <p>Get $50,000+ worth of resources at a fraction of the cost</p>
                 </div>
                 
-                <div class="feature-card">
+                <div class="feature-card animate delay-3">
                     <div class="feature-icon">
                         <i class="fas fa-sync-alt"></i>
                     </div>
@@ -912,7 +958,7 @@
                     <p>Regular updates with new content and resources</p>
                 </div>
                 
-                <div class="feature-card">
+                <div class="feature-card animate delay-1">
                     <div class="feature-icon">
                         <i class="fas fa-lock"></i>
                     </div>
@@ -973,7 +1019,7 @@
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Contact Us</h3>
+                    <h3>Contact & Support</h3>
                     <ul class="footer-links">
                         <li><a href="#"><i class="fas fa-envelope"></i> support@digitalbundlepro.com</a></li>
                         <li><a href="#"><i class="fas fa-phone-alt"></i> +1 (800) 123-4567</a></li>
@@ -1010,23 +1056,24 @@
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
                 header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
-                header.style.background = 'rgba(10, 10, 10, 0.95)';
+                header.style.background = 'rgba(15, 12, 41, 0.98)';
             } else {
                 header.style.boxShadow = 'none';
-                header.style.background = 'rgba(10, 10, 10, 0.9)';
+                header.style.background = 'rgba(15, 12, 41, 0.95)';
             }
         });
         
-        // Bundle card hover animations
-        const bundleCards = document.querySelectorAll('.bundle-card');
-        bundleCards.forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-10px)';
+        // Animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
             });
-            
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(0)';
-            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.bundle-card, .feature-card, .section-title h2').forEach(el => {
+            observer.observe(el);
         });
         
         // CTA button animation
